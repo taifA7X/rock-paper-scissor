@@ -1,0 +1,29 @@
+#score {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#container {
+    display:flex;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#container2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+.weapon {
+    width: 200px;
+    height: 200px;
+}
+#result {
+    text-align: center;
+}

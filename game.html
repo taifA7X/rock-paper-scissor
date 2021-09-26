@@ -5,103 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
+    
+    <h1 id="score">SCORE</h1>
 
-        const computerSelection = computerPlay();
-        const rounds = 6;
-        let playerScore = 0;
-        let computerScore = 0;
-        let playerSelection;
-        let winner;
+    <div id="container">
+        <div class="sub-container">
+            <h2>Computer score</h2>
+            <div id="computer"></div>
+        </div>
 
-        // returns rock, paper, scissors randomly 
-        function computerPlay() {
-            let weapon;
-            let a = Math.floor(Math.random() * (4 - 1) ) + 1;
-            if (a === 1) {
-                weapon = "rock";
-            }
-            else if (a === 2) {
-                weapon = "scissor";
-            }
-            else if (a === 3) {
-                weapon = "paper";
-            }
+        <div class="sub-container">
+            <h2>Player score</h2>
+            <div id="player"></div>
+        </div>
+    </div>
 
-            return weapon;
-        }
+    <div id="container2">
+        <button id="rock" class="weapon">ROCK</button>
+        <button id="paper" class="weapon">PAPER</button>
+        <button id="scissor" class="weapon">SCISSOR</button>
+    </div>
 
-        //Plays a round  
-        function playRound(playerSelection, computerSelection) {
-            let message;
-          
-            if (playerSelection === computerSelection) {
-                message = "It's a draw match";
-            }
-            else if (playerSelection === "rock") {
-                if (computerSelection === "paper") {
-                    message = "You lose";
-                    computerScore++;
-                }
-                else if (computerSelection === "scissor") {
-                    message = "You win";
-                    playerScore++;
-                }
-            }
-            else if (playerSelection === "scissor") {
-                if (computerSelection === "paper") {
-                    message = "You win";
-                    playerScore++;
-                }
-                else if (computerSelection === "rock") {
-                    message = "You lose"
-                    computerScore++;
-                }
-            }
-            else if (playerSelection === "paper") {
-                if (computerSelection === "rock") {
-                    message = "You win";
-                    playerScore++;
-                }
-                else if (computerSelection === "scissor") {
-                    message = "You lose";
-                    computerScore++;
-                }
-            }
-            return message;
-        }
-
-        function game() {
-            return playRound(playerSelection, );
-        }
-
-            for (i = 1; i < rounds; i++) {
-            playerSelection = prompt("Choose your weapon: ")
-            
-            if (playerSelection === undefined) {
-                alert("Please choose a weapon.")
-            }
-            else
-            {alert("You chose " + playerSelection + 
-            " and computer chose " + computerSelection + ". " + 
-            playRound(playerSelection, computerSelection) +
-            ". Your score: " + playerScore + " and computer score: " +
-            computerScore)}
-        }
-        
-        if (playerScore > computerScore) {
-            winner = "You won the tournnament!";
-            alert(winner);
-        }
-        else {
-            winner = "Better luck next time :(";
-            alert(winner)
-        }
-
-    </script>
+    <div id="winner"></div>
+    <div id="loser"></div>
 </body>
 </html>
-
 
