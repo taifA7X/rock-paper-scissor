@@ -24,6 +24,13 @@
     width: 200px;
     height: 200px;
 }
-#result {
+
+#winner {
     text-align: center;
+    padding-top: 30px;
+    
+}
+#loser {
+    text-align: center;
+    padding-top: 30px;
 }
